@@ -36,6 +36,8 @@ async function run() {
             res.send(service)
         })
 
+
+
         //POST API
         app.post('/services', async (req, res) => {
             const service = req.body;
@@ -61,6 +63,10 @@ run().catch(console.dir);
 
 app.get('/', (req, res) => {
     res.send('Running Genius Car Mechanics Server')
+})
+
+app.get('/hello', (req, res) => {
+    res.send('hello updated')
 })
 
 app.listen(port, () => {
